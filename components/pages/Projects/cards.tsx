@@ -6,7 +6,6 @@ import { FaEye } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import { teachStack } from "@/data/projects/projects";
 import { getColorClass, stripHtmlAndDecode} from "@/utils/cn";
 import { BASE_URL_IMAGE } from "@/lib/api";
 
@@ -40,7 +39,7 @@ function CardProjects({ project }: { project: any }) {
         </p>
         {/* Tech Stack */}
         <div className="flex flex-wrap gap-2">
-          {project?.techstack?.map((tech, index) => (
+          {project?.techstack?.map((tech:any, index:any) => (
             <span
               key={index}
               className={`px-2 py-1 bg-glass text-xs font-medium rounded-full border text-primary`}
