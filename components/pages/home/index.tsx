@@ -9,7 +9,6 @@ import Image from "next/image";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { TypeAnimation } from "react-type-animation";
-import { stacks as localStacks } from "@/data/stacks";
 import Marquee from "react-fast-marquee";
 import CardProjects from "../Projects/cards";
 import { Project, TechStack } from "@/types/types";
@@ -48,7 +47,7 @@ function Hero() {
   }, []);
 
   /* ---------- pilih skill list: dari API atau fallback ------- */
-  const skillList = techs.length ? techs : localStacks;
+  const skillList = techs.length ? techs : [];
 
   /* --------------------------- UI --------------------------- */
   if (loading) return <Loading/>;
