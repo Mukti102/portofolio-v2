@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { stacks } from "@/data/stacks";
 import Header from "@/components/ui/Header";
 import { api, BASE_URL_IMAGE } from "@/lib/api";
 import Loading from "@/components/ui/Loading";
