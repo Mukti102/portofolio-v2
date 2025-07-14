@@ -14,9 +14,9 @@ const nextConfig = {
         pathname: "**",
       },
       {
-        protocol: "http", // tambahkan ini
-        hostname: "localhost", // penting!
-        port: "8000", // opsional, jika server Laravel berjalan di port 8000
+        protocol: "https", // tambahkan ini
+        hostname: "https://portofolio.genera.my.id", // penting!
+        port: "**", // opsional, jika server Laravel berjalan di port 8000
         pathname: "**",
       },
     ],
