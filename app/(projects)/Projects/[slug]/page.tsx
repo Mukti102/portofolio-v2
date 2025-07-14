@@ -10,7 +10,6 @@ import Caraosel from "@/components/ui/Caraosel";
 import Button from "@/components/ui/Button";
 import { Project } from "@/types/types";
 import { api } from "@/lib/api";
-import { stripHtmlAndDecode } from "@/utils/cn";
 import Markdown from "markdown-to-jsx";
 
 interface ProjectPageProps {
