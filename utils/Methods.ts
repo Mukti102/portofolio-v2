@@ -16,4 +16,3 @@ const formatNumber = (int: number) => {
   return int >= 10 ? int : `0${int}`;
 };
 
-console.log(sisaPosition(5.591999999999999, 240.4843125));

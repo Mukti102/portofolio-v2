@@ -3,15 +3,16 @@ import { Carousel } from "flowbite-react";
 import React from "react";
 import { IProjects } from "@/types/types";
 import Image from "next/image";
-function Caraosel({ project }: { project: any }) {
+import { BASE_URL_IMAGE } from "@/lib/api";
+function Caraosel({ slider }: { slider: any }) {
   return (
     <div className="w-full  h-52 md:h-[400px]">
       <Carousel>
-        {project?.slider?.map((item: any, index: number) => {
+        {slider?.map((item: any, index: number) => {
           return (
             <div key={index}>
               <Image
-                src={item?.src}
+                src={`${BASE_URL_IMAGE}${item?.image}`}
                 alt="High resolution image"
                 quality={100}
                 className="w-full brightness-90 h-full object-cover"

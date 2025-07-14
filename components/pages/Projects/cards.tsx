@@ -50,7 +50,7 @@ function CardProjects({ project }: { project: any }) {
         </div>
         <div className="flex absolute bottom-4 right-4 justify-end 9t-4">
           <Link
-            href={`/Projects/${project.description}`}
+            href={`/Projects/${project.slug}`}
             className="bg px-3 bg-primary text-white rounded-lg mt-5 text-sm px-3 py-2"
           >
             Preview
