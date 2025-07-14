@@ -16,7 +16,7 @@ const nextConfig = {
       {
         protocol: "https", // tambahkan ini
         hostname: "https://portofolio.genera.my.id", // penting!
-        port: "**", // opsional, jika server Laravel berjalan di port 8000
+        port: "**", 
         pathname: "**",
       },
     ],
