@@ -1,16 +1,16 @@
 import { useState } from "react";
-import { 
-  Home, 
-  User, 
-  FolderOpen, 
-  BookOpen, 
-  Mail, 
-  Sun, 
+import {
+  Home,
+  User,
+  FolderOpen,
+  BookOpen,
+  Mail,
+  Sun,
   Moon,
   Menu,
   X,
   ExternalLink,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -22,17 +22,16 @@ function Sidebar() {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-  
-const pathname = usePathname();
 
-const menuItems = [
-  { href: "/", name: "Home", icon: <Home size={20} /> },
-  { href: "/About", name: "About", icon: <User size={20} /> },
-  { href: "/Projects", name: "Project", icon: <FolderOpen size={20} /> },
-  { href: "/Skills", name: "Certificates", icon: <BookOpen size={20} /> },
-  { href: "/Contact", name: "Contact", icon: <Mail size={20} /> },
-];
+  const pathname = usePathname();
 
+  const menuItems = [
+    { href: "/", name: "Home", icon: <Home size={20} /> },
+    { href: "/About", name: "About", icon: <User size={20} /> },
+    { href: "/Projects", name: "Project", icon: <FolderOpen size={20} /> },
+    { href: "/Skills", name: "Certificates", icon: <BookOpen size={20} /> },
+    { href: "/Contact", name: "Contact", icon: <Mail size={20} /> },
+  ];
 
   return (
     <div className={` h-screen transition-colors duration-300 z-[100000]`}>
@@ -46,20 +45,22 @@ const menuItems = [
 
       {/* Overlay for mobile */}
       {isOpen && (
-        <div 
+        <div
           className="lg:hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-40"
           onClick={() => setIsOpen(false)}
         />
       )}
 
       {/* Sidebar */}
-      <div className={`
+      <div
+        className={`
         fixed left-0 top-0 h-full w-72 z-50 transform transition-transform duration-300 ease-in-out
-        ${isOpen ? 'translate-x-0' : '-translate-x-full'}
+        ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 lg:static lg:z-auto
         bg-gradient-to-br from-blue-500 via-cyan-500 to-cyan-600
         shadow-2xl
-      `}>
+      `}
+      >
         <div className="relative h-full overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden">
@@ -78,7 +79,9 @@ const menuItems = [
                     <span className="w-2 h-2 bg-green-400 rounded-full"></span>
                     Hire Me!
                   </button>
-                  <Link href='/player'
+                  <Link
+                    href="/player"
+                    onClick={() => setIsOpen(false)} // ✅ tutup sidebar
                     className="p-2 bg-white/20 backdrop-blur-sm rounded-full text-white hover:bg-white/30 text-xl transition-all duration-300"
                   >
                     <FaSpotify />
@@ -104,30 +107,36 @@ const menuItems = [
             {/* Navigation */}
             <nav className="flex-1 px-6">
               <ul className="space-y-2">
-                {menuItems.map((item, index) =>{
-                   const isActive = pathname === item.href;
+                {menuItems.map((item, index) => {
+                  const isActive = pathname === item.href;
                   return (
                     <li key={index}>
-                    <Link
-                      href={item.href}
-                      className={`
+                      <Link
+                        href={item.href}
+                        onClick={() => setIsOpen(false)} // ✅ tutup sidebar
+                        className={`
                         flex items-center gap-4 px-4 py-3 rounded-xl transition-all duration-300 group
-                        ${isActive 
-                          ? 'bg-white/20 backdrop-blur-sm text-white shadow-lg' 
-                          : 'text-white/80 hover:bg-white/10 hover:text-white'
+                        ${
+                          isActive
+                            ? "bg-white/20 backdrop-blur-sm text-white shadow-lg"
+                            : "text-white/80 hover:bg-white/10 hover:text-white"
                         }
                       `}
-                    >
-                      <span className={`transition-transform duration-300 ${isActive ? 'scale-110' : 'group-hover:scale-110'}`}>
-                        {item.icon}
-                      </span>
-                      <span className="font-medium">{item.name}</span>
-                      {isActive && (
-                        <div className="ml-auto w-2 h-2 bg-white rounded-full"></div>
-                      )}
-                    </Link>
-                  </li>
-                  )
+                      >
+                        <span
+                          className={`transition-transform duration-300 ${
+                            isActive ? "scale-110" : "group-hover:scale-110"
+                          }`}
+                        >
+                          {item.icon}
+                        </span>
+                        <span className="font-medium">{item.name}</span>
+                        {isActive && (
+                          <div className="ml-auto w-2 h-2 bg-white rounded-full"></div>
+                        )}
+                      </Link>
+                    </li>
+                  );
                 })}
               </ul>
             </nav>
