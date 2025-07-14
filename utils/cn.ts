@@ -4,8 +4,9 @@ import { twMerge } from "tailwind-merge";
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
-
-export const getColorClass = (color: any) => {
+export const getColorClass = (
+  color: "red" | "blue" | "green" | "yellow" | "purple" | "teal" | "slate"
+) => {
   const colorMap = {
     red: " text-red-500 border-red-500/30",
     blue: " text-blue-500 border-blue-500/30",
