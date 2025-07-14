@@ -1,0 +1,52 @@
+{
+  "name": "my-portofolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@react-icons/all-files": "^4.1.0",
+    "@theme-toggles/react": "^4.1.0",
+    "aos": "^2.3.4",
+    "axios": "^1.10.0",
+    "clsx": "^2.1.0",
+    "flowbite-react": "^0.8.0",
+    "framer-motion": "^11.0.24",
+    "hamburger-react": "^2.5.0",
+    "lucide-react": "^0.525.0",
+    "markdown-to-jsx": "^7.4.7",
+    "mini-svg-data-uri": "^1.4.4",
+    "next": "14.1.4",
+    "next-themes": "^0.3.0",
+    "normalize.css": "^8.0.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-fast-marquee": "^1.6.5",
+    "react-github-calendar": "^4.5.9",
+    "react-icon": "^1.0.0",
+    "react-responsive-carousel": "^3.2.23",
+    "react-type-animation": "^3.2.0",
+    "react-use-audio-player": "^2.2.0",
+    "tailwind-merge": "^2.2.2",
+    "zustand": "^4.5.2"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.13",
+    "@types/aos": "^3.0.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-icons": "^3.0.0",
+    "autoprefixer": "^10.0.1",
+    "daisyui": "^4.10.1",
+    "file-loader": "^6.2.0",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5",
+    "url-loader": "^4.1.1"
+  }
+}
