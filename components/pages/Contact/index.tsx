@@ -20,7 +20,7 @@ function Contact() {
     }));
   };
 
-  const submitEvent = async (e) => {
+  const submitEvent = async (e:any) => {
     e.preventDefault();
     setIsSubmitting(true);
     
