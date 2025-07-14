@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig } from "axios";
 
 // Gunakan env, fallback ke localhost.
 const baseURL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://localhost:8000/api";
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://portofolio.genera.my.id/api";
 
 // 1⃣  Instance utama
 export const api = axios.create({
