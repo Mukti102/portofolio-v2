@@ -29,4 +29,4 @@ export async function fetcher<T = any>(
 }
 
 
-export const BASE_URL_IMAGE = "http://localhost:8000/storage/"
+export const BASE_URL_IMAGE = "https://portofolio.genera.my.id/storage"
