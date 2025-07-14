@@ -7,7 +7,6 @@ interface IconProps extends ComponentProps<"div"> {
 }
 
 function Icon({ title, src, ...props }: IconProps) {
-  console.log(src);
   return (
     <>
       <div {...props}>

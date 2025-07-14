@@ -47,7 +47,6 @@ const ProjectPage: React.FC<ProjectPageProps> = ({ params }) => {
   if (!project)
     return <p className="py-10 text-center">Project tidak ditemukan.</p>;
 
-  console.log(project);
 
   /* -------------------------------------------------- */
   /* VIEW                                               */
