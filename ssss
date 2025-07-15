@@ -1,0 +1,143 @@
+[33mcommit d7ae9db9c295984d27269cbff2010de030bb9344[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Tue Jul 15 14:56:20 2025 +0700
+
+    fix some probllem
+
+[33mcommit 813ba9455f22f990ec8ffdfc1f9f67e9b510ff3b[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Tue Jul 15 14:23:44 2025 +0700
+
+    fix some probllem
+
+[33mcommit a36b2511eb252c7a62d266ee919cc14d676d6f5f[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Tue Jul 15 14:01:29 2025 +0700
+
+    fix bg-lig mode
+
+[33mcommit f857c445d187473a79ed1cfe6c645cab3a8f9ebe[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Tue Jul 15 07:43:36 2025 +0700
+
+    fix some problem
+
+[33mcommit 88cbaa335357f510d9fd7cb2dce9f4d5c8151ac0[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 21:09:30 2025 +0700
+
+    fix
+
+[33mcommit 785acb54c8fe7540ec72bcc207ecbd7bb37dc8ca[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 20:24:45 2025 +0700
+
+    fix
+
+[33mcommit 37734ba0bc4d54c357d31e8b0cfda81bb910a8f5[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 20:17:34 2025 +0700
+
+    fix project detail and base url image
+
+[33mcommit 78a807ff110ef7723bed24efc2b482bbc937da67[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 20:16:26 2025 +0700
+
+    fix project detail and base url image
+
+[33mcommit aa52d2d9789d1a7c16dec21a12108ddb100a67de[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 19:11:32 2025 +0700
+
+    change image hostname
+
+[33mcommit 901e2e6f8579f973dab1ed9a2258812750f9226e[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 19:07:36 2025 +0700
+
+    change image hostname
+
+[33mcommit 10027c811fcf0eb5c0d1112ba48300f31cd39bc6[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 19:03:29 2025 +0700
+
+    fix sidebar
+
+[33mcommit c3cf46e7cefc1e0e3aa65933034dc80b0954f7ce[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 19:00:56 2025 +0700
+
+    change base url api
+
+[33mcommit 7b8e9c9e0983ba2fc6c81104861fc03c9a31fc7d[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 18:57:52 2025 +0700
+
+    change base url api
+
+[33mcommit ca89790dfdf6ca8b7201a33f90ef4db365e96e47[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 14:01:16 2025 +0700
+
+    fix cn
+
+[33mcommit 4343c045e178c10a2346431d12b4a2cb670dd2dd[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:58:46 2025 +0700
+
+    fix TiktokProfile
+
+[33mcommit 92065f43e69e380f3a303c0def3939d40f63124a[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:47:38 2025 +0700
+
+    fix card.tsx
+
+[33mcommit 57fa5690c2e7b04bd4047e4f4d777c795133b3f1[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:38:08 2025 +0700
+
+    fix contact.tsx
+
+[33mcommit 25f9634394cb68d39f6627b5115f4f7a13b34ee9[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:29:33 2025 +0700
+
+    fix
+
+[33mcommit 1f2e034395b1d7f79bde18337e00bef0783aa921[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:21:28 2025 +0700
+
+    delete assets on public
+
+[33mcommit 0cf99fbe7a141aa7c0f02fd23dd80b8d2f8842aa[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:14:50 2025 +0700
+
+    delete assets on public
+
+[33mcommit 86c1480e755abbe0df731de82d53323bee422e24[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:08:43 2025 +0700
+
+    delete assets on public
+
+[33mcommit 3743e966ed731d1f7c2b1e42d809601551ee8767[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:04:40 2025 +0700
+
+    delete assets on public
+
+[33mcommit 0f0172fc8db61a464e6aed7998d512fde38c60ea[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 13:00:47 2025 +0700
+
+    delete assets on public
+
+[33mcommit 065554c2e3dcc2c5f9750344a5fc0fec61a48220[m
+Author: abdul mukti <abdulmukti40390@gmail.com>
+Date:   Mon Jul 14 12:51:52 2025 +0700
+
+    first commit
