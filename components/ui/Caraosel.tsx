@@ -6,7 +6,7 @@ import Image from "next/image";
 import { BASE_URL_IMAGE } from "@/lib/api";
 function Caraosel({ slider }: { slider: any }) {
   return (
-    <div className="w-full  h-52 md:h-[400px]">
+    <div className="w-full   md:p-4 md:bg-glass rounded-lg h-52 md:h-[400px]">
       <Carousel>
         {slider?.map((item: any, index: number) => {
           return (
@@ -15,7 +15,7 @@ function Caraosel({ slider }: { slider: any }) {
                 src={`${BASE_URL_IMAGE}${item?.image}`}
                 alt="High resolution image"
                 quality={100}
-                className="w-full brightness-90 h-full object-cover"
+                className="w-full bg-glass overflow-hidden brightness-90 h-full object-cover"
                 width={1920} // Set desired width
                 height={1080} // Set desired height
               />

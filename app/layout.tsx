@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={`${inter.className} h-screen bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 bg w-screen overflow-hidden`}>
+      <body className={`${inter.className} h-screen bg-gradient-to-r from-gray-950 via-gray-800 to-gray-950 bg w-screen overflow-hidden`}>
         {/* <ProviderTheme> */}
         <NavbarProvider>
           <div className="relative flex  h-screen w-full">

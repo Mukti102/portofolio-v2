@@ -25,11 +25,9 @@ export default function ProjectDetail({ project }: { project: any }) {
         gradient="bg-gradient-to-r from-rose-400 to-pink-500"
       />
 
-      <div className="mx-auto max-w-7xl px-4 py-8">
+      <div className="mx-auto max-w-7xl px-1 md:px-4 py-8">
         {/* Gallery */}
-        <section className="rounded-xl border border-slate-500 bg-gradient-dark p-5 shadow-xl">
           <Caraosel slider={data?.image_slider ?? []} />
-        </section>
 
         {/* Tombol aksi */}
         <div className="mt-6 flex flex-wrap gap-4">
