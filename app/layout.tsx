@@ -22,10 +22,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={`${inter.className} h-screen w-screen overflow-hidden`}>
+      <body className={`${inter.className} h-screen bg-gradient-to-r from-gray-950 via-gray-700 to-gray-950 bg w-screen overflow-hidden`}>
         {/* <ProviderTheme> */}
         <NavbarProvider>
-          <div className="relative flex h-screen w-full">
+          <div className="relative flex  h-screen w-full">
             {/* Background Effects */}
             <div className="absolute inset-0 -z-10 overflow-hidden">
               <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-purple-900/20 via-transparent to-blue-900/20"></div>
@@ -34,7 +34,7 @@ export default function RootLayout({
             </div>
 
             {/* Konten scrollable */}
-            <div className="flex-1 overflow-y-auto overflow-x-hidden p-3 md:pt-5 pt-20 md:p-5">{children}</div>
+            <div className="flex-1 overflow-y-auto  overflow-x-hidden p-3 md:pt-5 pt-20 md:p-5">{children}</div>
           </div>
           <MusicPlayer />
         </NavbarProvider>

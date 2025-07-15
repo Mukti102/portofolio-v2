@@ -11,6 +11,7 @@
     width: 0px;
     background-color: white;
   }
+  
   #song-bar:hover::-webkit-slider-thumb{
     height: 10px;
     width: 10px;
