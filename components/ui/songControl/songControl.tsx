@@ -2,71 +2,97 @@
 import "./control.css";
 import SkipNext from "@/components/shared/SkipNext";
 import { FaPlay, FaPause } from "react-icons/fa";
-import useActiveSong from "@/hooks/useActiveSong";
-import { convertToSecond } from "@/utils/Methods";
-import { curentPosition } from "@/utils/Methods";
 import { FiLoader } from "react-icons/fi";
 import { ChangeEvent, useState } from "react";
+import useActiveSong from "@/hooks/useActiveSong";
 import useZustand from "@/hooks/useZustand";
+import { convertToSecond, curentPosition } from "@/utils/Methods";
 
 function SongControl() {
   const { playing, duration, togglePlayPause, currentTime, isLoading, seek } =
     useActiveSong();
   const { setActiveSongIndex, activeSongIndex, songs } = useZustand();
 
+  /* ✅ state lokal utk slider */
+  const [isSeeking, setIsSeeking] = useState(false);
+  const [sliderValue, setSliderValue] = useState(0);
+
+  /* ketika audio update dan kita tidak sedang geser, sinkronkan */
+  if (!isSeeking && sliderValue !== currentTime) {
+    setSliderValue(currentTime);
+  }
+
+  /* warna progress bar */
   const style = {
-    background: `linear-gradient(to right  , green ${curentPosition(
-      currentTime,
-      duration
-    )}%,gray ${curentPosition(currentTime, duration)}%)`,
-    // background: "linear-gradient(to right ,  red  50%,white 50%)",
+    background: `linear-gradient(to right,
+      green ${curentPosition(sliderValue, duration)}%,
+      gray  ${curentPosition(sliderValue, duration)}%)`,
   };
 
-  const sliderSong = (event: ChangeEvent<HTMLInputElement>) => {
-    seek(Number(event.target.value));
+  /* ketika user seret */
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setSliderValue(Number(e.target.value));
   };
 
+  /* saat lepas mouse / touch ‑ commit seek */
+  const commitSeek = () => {
+    setIsSeeking(false);
+    seek(sliderValue);
+  };
+
+  /* tombol next/prev */
   const nextSong = () => {
-    if (activeSongIndex !== null && activeSongIndex + 1 !== songs.length) {
+    if (activeSongIndex !== null && activeSongIndex + 1 < songs.length) {
       setActiveSongIndex(activeSongIndex + 1);
-    } else return;
+    }
   };
-
   const prevSong = () => {
-    if (activeSongIndex !== null && activeSongIndex !== 0) {
+    if (activeSongIndex !== null && activeSongIndex > 0) {
       setActiveSongIndex(activeSongIndex - 1);
-    } else return;
+    }
   };
 
   return (
-    <div className="flex-1 sm:flex  flex-col gap-1 items-center justify-center h-full">
-      <div className="w-full  h-full items-center sm:h-max flex gap-10 sm:justify-center justify-end">
-        <button onClick={() => prevSong()} className="sm:inline hidden">
+    <div className="flex-1 sm:flex flex-col gap-1 items-center justify-center h-full">
+      <div className="w-full h-full items-center sm:h-max flex gap-10 sm:justify-center justify-end">
+        <button onClick={prevSong} className="sm:inline hidden">
           <SkipNext className="w-[14px] h-[14px] fill-current flip" />
         </button>
+
         <button
-          onClick={() => togglePlayPause()}
-          className={`${
-            isLoading ? "cursor-not-allowed" : "cursor-pointer"
-          } w-7 h-7 text-sm bg-white z-[1000px] flex justify-center items-center rounded-full text-black`}
+          onClick={togglePlayPause}
+          disabled={isLoading}
+          className={`w-7 h-7 text-sm bg-white flex justify-center items-center rounded-full text-black ${
+            isLoading ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
+          }`}
         >
           {isLoading ? <FiLoader /> : playing ? <FaPause /> : <FaPlay />}
         </button>
-        <button onClick={() => nextSong()} className="sm:inline hidden">
-          <SkipNext className="w-[14px] h-[14px] fill-current " />
+
+        <button onClick={nextSong} className="sm:inline hidden">
+          <SkipNext className="w-[14px] h-[14px] fill-current" />
         </button>
       </div>
+
+      {/* progress bar */}
       <div className="sm:flex w-[70%] gap-2 items-center hidden text-[.6rem]">
-        <span>{convertToSecond(currentTime)}</span>
+        <span>{convertToSecond(sliderValue)}</span>
+
         <input
           type="range"
-          id="song-bar"
           min={0}
-          value={currentTime}
+          id="song-bar"
           max={duration}
-          onChange={sliderSong}
+          value={sliderValue}
+          onChange={handleChange}
+          onMouseDown={() => setIsSeeking(true)}
+          onTouchStart={() => setIsSeeking(true)}
+          onMouseUp={commitSeek}
+          onTouchEnd={commitSeek}
           style={style}
+          className="w-full"
         />
+
         <span>{convertToSecond(duration)}</span>
       </div>
     </div>

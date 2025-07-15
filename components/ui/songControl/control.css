@@ -1,6 +1,6 @@
 #song-bar{
     -webkit-appearance: none;
-    height: 4px;
+    height: 5px;
     width: 400px;
     border-radius: 50px;
     cursor: pointer;
