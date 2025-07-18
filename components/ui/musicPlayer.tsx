@@ -92,7 +92,7 @@ function MusicPlayer() {
         // onClick={Open}
         className={`${
           activeSongIndex === null ? "hidden" : ""
-        }  bg-gradient-to-br from-white/30 to-white/10  flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 border-y border-white/30 backdrop-blur-sm  z-[100000] shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
+        }  liquid-glass  z-[100000] shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
       >
         <div className="sm:w-[25%] w-[70%] h-full flex gap-2 flex-none">
           <div className="sm:w-14 sm:h-14 border border-1 md:border-2 border-white shadow-md w-14 sm:rounded-sm h-full">

@@ -11,10 +11,30 @@ strong{
 }
 
 
+.liquid-glass {
+  background: rgba(255, 255, 255, 0.1); /* semi-transparent */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  color: #fff;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+/* Optional: Hover Glow */
+.liquid-glass:hover {
+  box-shadow: 0 0 60px rgba(255, 255, 255, 0.2);
+  transform: scale(1.02);
+}
+
+
 @layer components {
   .underline-animation {
     @apply after:w-0 after:block after:h-[2px] after:bg-gradient-to-tr after:from-primary after:to-indigo after:transition-all after:delay-100 after:ease-in-out hover:after:w-full cursor-pointer 
   }
+
+  
 
   .glow{
     @apply shadow-2xl shadow-purple-500/25 bg-gradient-to-br from-purple-600/20 to-blue-600/20 backdrop-blur-sm border border-white/10;
