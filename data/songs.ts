@@ -2,6 +2,14 @@ import { Isongs } from "@/types/types";
 
 export const playlists: Isongs<string>[] = [
   {
+    title: "Sushi Dont Lie",
+    artis: "Skai Is You God",
+    song: "/sound/sushiDontLie.mp3",
+    thumbnail:
+      "https://i.scdn.co/image/ab67616d0000b2738ef6fd2bedabbfcba18d3aac",
+    duration: "02:53",
+  },
+  {
     title: "Bird of Feather",
     artis: "Bielie Eilish",
     song: "/sound/birdOfFeather.mp3",
