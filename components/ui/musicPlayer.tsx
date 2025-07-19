@@ -7,6 +7,7 @@ import useZustand from "@/hooks/useZustand";
 import { GrNext } from "react-icons/gr";
 import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
+import GlassSurface from "./Glass/GlassSurface";
 
 function MusicPlayer() {
   const { activeSongIndex, songs } = useZustand();
@@ -86,19 +87,20 @@ function MusicPlayer() {
     },
   };
 
+  const isMobile = window.innerWidth < 768;
+
   return (
-    <>
+     <>
+     <GlassSurface width={100} height={isMobile ? 50 : 80} borderRadius={0} className={`${activeSongIndex == null ? "hidden" : ""} absolute z-[1000000000]  mx-auto    bottom-0`}>
       <div
         // onClick={Open}
-        className={`${
-          activeSongIndex === null ? "hidden" : ""
-        }  liquid-glass  z-[100000] shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
+        className={`z-[100000] shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
       >
-        <div className="sm:w-[25%] w-[70%] h-full flex gap-2 flex-none">
-          <div className="sm:w-14 sm:h-14 border border-1 md:border-2 border-white shadow-md w-14 sm:rounded-sm h-full">
+        <div className="sm:w-[20%] w-[60%] h-full flex gap-2 flex-none">
+          <div className="sm:w-14 sm:h-14 md:p-0  rounded-md md:border-2 shadow-md w-14 sm:rounded-sm h-full">
             <Image
               src={currentSong?.thumbnail}
-              className="w-full h-full z-50 object-cover"
+              className="w-full h-full z-50 object-cover rounded-sm"
               width={100}
               height={100}
               alt={currentSong?.title || ""}
@@ -154,6 +156,7 @@ function MusicPlayer() {
           </motion.div>
         )}
       </AnimatePresence>
+     </GlassSurface>
     </>
   );
 }

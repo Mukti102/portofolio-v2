@@ -16,8 +16,14 @@ const nextConfig = {
       },
       {
         protocol: "https", // tambahkan ini
-        hostname: "https://portofolio.genera.my.id", // penting!
+        hostname: "portofolio.genera.my.id", // penting!
         port: "**", 
+        pathname: "**",
+      },
+      {
+        protocol: "http", // tambahkan ini
+        hostname: "127.0.0.1", // penting!
+        port: "8000", 
         pathname: "**",
       },
     ],

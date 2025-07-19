@@ -4,6 +4,7 @@ import "./globals.css";
 import ProviderTheme from "@/components/provider/ThemeProvider";
 import NavbarProvider from "@/components/provider/NavbarProvider";
 import MusicPlayer from "@/components/ui/musicPlayer";
+import GlassSurface from "@/components/ui/Glass/GlassSurface";
 
 const inter = Montserrat({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" sizes="any" />
-      <body className={`${inter.className} h-screen bg-gradient-to-r from-gray-950 via-gray-800 to-gray-950 bg w-screen overflow-hidden`}>
+      <body className={`${inter.className}  h-screen bg-gradient-to-r from-gray-950 via-gray-800 to-gray-950 bg w-screen overflow-hidden`}>
         {/* <ProviderTheme> */}
         <NavbarProvider>
           <div className="relative flex  h-screen w-full">
@@ -34,7 +35,7 @@ export default function RootLayout({
             </div>
 
             {/* Konten scrollable */}
-            <div className="flex-1 overflow-y-auto  overflow-x-hidden p-3 md:pt-5 pt-20 md:p-5">{children}</div>
+            <div className="flex-1 custom-scrollbar overflow-y-auto  overflow-x-hidden p-3 md:pt-5 pt-20 md:p-5">{children}</div>
           </div>
           <MusicPlayer />
         </NavbarProvider>
