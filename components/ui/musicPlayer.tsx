@@ -105,7 +105,7 @@ function MusicPlayer() {
     {typeof window !== 'undefined' && (
       <GlassSurface
         width={100}
-        height={isMobileMode ? 50 : 80}
+        height={isMobileMode ? 60 : 80}
         borderRadius={0}
         className={`${
           activeSongIndex == null ? "hidden" : ""
