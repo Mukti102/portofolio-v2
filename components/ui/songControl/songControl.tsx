@@ -22,6 +22,8 @@ function SongControl() {
     setSliderValue(currentTime);
   }
 
+  const song = songs.find((item,index) => index == activeSongIndex);
+
   /* warna progress bar */
   const style = {
     background: `linear-gradient(to right,
@@ -53,7 +55,7 @@ function SongControl() {
   };
 
   return (
-    <div className="flex-1 sm:flex flex-col gap-1 items-center justify-center h-full">
+    <div className="flex-1 z-[10000000000000000000] sm:flex flex-col gap-1 items-center justify-center h-full">
       <div className="w-full h-full items-center sm:h-max flex gap-10 sm:justify-center justify-end">
         <button onClick={prevSong} className="sm:inline hidden">
           <SkipNext className="w-[14px] h-[14px] fill-current flip" />
@@ -93,7 +95,7 @@ function SongControl() {
           className="w-full"
         />
 
-        <span>{convertToSecond(duration)}</span>
+        <span>{song?.duration}</span>
       </div>
     </div>
   );
