@@ -30,7 +30,7 @@ function Hero() {
       try {
         setLoading(true);
         const [projectsRes, techsRes] = await Promise.all([
-          api.get<Project[]>("/projects", { params: { limit: 6 } }),
+          api.get<Project[]>("/last-projects"),
           api.get<TechStack[]>("/techstack"),
         ]);
 
