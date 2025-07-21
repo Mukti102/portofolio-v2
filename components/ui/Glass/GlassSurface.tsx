@@ -110,7 +110,11 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" fill="black"></rect>
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" rx="${borderRadius}" fill="url(#red-grad)" />
         <rect x="0" y="0" width="${actualWidth}" height="${actualHeight}" rx="${borderRadius}" fill="url(#blue-grad)" style="mix-blend-mode: ${mixBlendMode}" />
-        <rect x="${edgeSize}" y="${edgeSize}" width="${actualWidth - edgeSize * 2}" height="${actualHeight - edgeSize * 2}" rx="${borderRadius}" fill="hsl(0 0% ${brightness}% / ${opacity})" style="filter:blur(${blur}px)" />
+        <rect x="${edgeSize}" y="${edgeSize}" width="${
+      actualWidth - edgeSize * 2
+    }" height="${
+      actualHeight - edgeSize * 2
+    }" rx="${borderRadius}" fill="hsl(0 0% ${brightness}% / ${opacity})" style="filter:blur(${blur}px)" />
       </svg>
     `;
 
@@ -190,6 +194,10 @@ const GlassSurface: React.FC<GlassSurfaceProps> = ({
   }, [width, height]);
 
   const supportsSVGFilters = () => {
+    if (typeof window === "undefined" || typeof document === "undefined") {
+      return false;
+    }
+
     const isWebkit =
       /Safari/.test(navigator.userAgent) && !/Chrome/.test(navigator.userAgent);
     const isFirefox = /Firefox/.test(navigator.userAgent);
