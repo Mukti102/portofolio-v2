@@ -43,6 +43,8 @@ function Sidebar() {
       {/* Mobile Menu Button */}
       <button className="lg:hidden" onClick={handleToggle}>
         <GlassSurface
+        borderWidth={0.05}
+        brightness={40}
           width={11}
           height={42}
           borderRadius={7}
