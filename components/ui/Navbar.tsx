@@ -15,6 +15,9 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaSpotify } from "react-icons/fa6";
+import Image from "next/image";
+import profile from "@/public/assets/profile.jpeg";
+import GlassSurface from "./Glass/GlassSurface";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,13 +37,19 @@ function Sidebar() {
   ];
 
   return (
-    <div className={` h-screen transition-colors duration-300 z-[100000]`}>
+    <div
+      className={` h-screen transition-colors duration-300 z-[1000000000000000]`}
+    >
       {/* Mobile Menu Button */}
-      <button
-        onClick={handleToggle}
-        className="lg:hidden fixed top-4 left-4 z-50 p-2 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
-      >
-        {isOpen ? <X size={24} /> : <Menu size={24} />}
+      <button className="lg:hidden" onClick={handleToggle}>
+        <GlassSurface
+          width={11}
+          height={42}
+          borderRadius={7}
+          className=" fixed top-4 left-4 z-50 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
+        </GlassSurface>
       </button>
 
       {/* Overlay for mobile */}
@@ -54,7 +63,7 @@ function Sidebar() {
       {/* Sidebar */}
       <div
         className={`
-        fixed left-0 top-0 h-full w-72 z-50 transform transition-transform duration-300 ease-in-out
+        fixed left-0 top-0 h-full w-72 z-[1000000000000] transform transition-transform duration-300 ease-in-out
         ${isOpen ? "translate-x-0" : "-translate-x-full"}
         lg:translate-x-0 lg:static lg:z-auto
         bg-gradient-to-br from-blue-500 via-cyan-500 to-cyan-600
@@ -93,7 +102,17 @@ function Sidebar() {
               <div className="mb-0">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center overflow-hidden">
                   <div className="w-20 h-20 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center">
-                    <User size={32} className="text-gray-600" />
+                    {profile ? (
+                      <Image
+                        src={profile}
+                        className="w-full rounded-full h-full object-cover"
+                        alt="profile"
+                        height={100}
+                        width={100}
+                      />
+                    ) : (
+                      <User size={32} className="text-gray-600" />
+                    )}
                   </div>
                 </div>
                 <h2 className="text-xl font-semibold text-white flex items-center justify-center gap-2">
