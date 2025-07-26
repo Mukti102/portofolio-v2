@@ -38,7 +38,7 @@ function Sidebar() {
 
   return (
     <div
-      className={` h-screen transition-colors duration-300 z-[1000000000000000]`}
+      className={` h-screen transition-colors duration-300 z-[10000000]`}
     >
       {/* Mobile Menu Button */}
       <button className="lg:hidden" onClick={handleToggle}>
