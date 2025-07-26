@@ -104,13 +104,16 @@ function MusicPlayer() {
     <>
     {typeof window !== 'undefined' && (
       <GlassSurface
+        width={100}
+        height={isMobileMode ? 57 : 80}
+        borderRadius={0}
         className={`${
           activeSongIndex == null ? "hidden" : ""
-        } absolute z-[10000000000000]   mx-auto    bottom-0`}
+        } absolute z-[1000000000]  mx-auto    bottom-0`}
       >
         <div
           // onClick={Open}
-          className={`z-[1000000000]  shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
+          className={`z-[100000] shadow-lg sm:py-2 py-0 justify-between sm:px-6 pl-0 pr-5 flex dark:text-slate-100 text-white sm:justify-center items-center h-[3.5rem] sm:h-[4.5rem]  fixed z-50 right-0 left-0 sm:bottom-0 bottom-0`}
         >
           <div className="sm:w-[20%] w-[60%] h-full flex gap-2 flex-none">
             <div className="sm:w-14 sm:h-14 md:p-0  rounded-md md:border-2 shadow-md w-14 sm:rounded-sm h-full">

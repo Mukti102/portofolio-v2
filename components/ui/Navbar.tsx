@@ -42,16 +42,11 @@ function Sidebar() {
     >
       {/* Mobile Menu Button */}
       <button className="lg:hidden" onClick={handleToggle}>
-        <GlassSurface
-        borderWidth={0.05}
-        brightness={40}
-          width={11}
-          height={42}
-          borderRadius={7}
-          className=" fixed top-4 left-4 z-50 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
+        <div
+          className=" fixed top-4 left-4 z-50 p-1.5 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white hover:bg-white/20 transition-all duration-300"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </GlassSurface>
+        </div>
       </button>
 
       {/* Overlay for mobile */}
