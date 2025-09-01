@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 
 const nextConfig = {
-
   images: {
     remotePatterns: [
       {
@@ -16,14 +15,19 @@ const nextConfig = {
       },
       {
         protocol: "https", // tambahkan ini
-        hostname: "portofolio.mitraanumkmmandiri.com", // penting!
-        port: "**", 
+        hostname: "portofolio.genera.my.id", // penting!
+        port: "**",
+        pathname: "**",
+      },
+      {
+        protocol: "https",
+        hostname: "portofolio.mitraanumkmmandiri.com", // ✅ domain baru
         pathname: "**",
       },
       {
         protocol: "http", // tambahkan ini
         hostname: "127.0.0.1", // penting!
-        port: "8000", 
+        port: "8000",
         pathname: "**",
       },
     ],

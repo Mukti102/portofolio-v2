@@ -33,10 +33,11 @@ function Hero() {
           api.get<Project[]>("/last-projects"),
           api.get<TechStack[]>("/techstack"),
         ]);
-
+      
         setProjects(projectsRes.data);
         setTechs(techsRes.data);
       } catch (err: any) {
+        console.log(err.message);
         setError(err.message ?? "Gagal memuat data");
       } finally {
         setLoading(false);
