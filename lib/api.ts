@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig } from "axios";
 
 // Gunakan env, fallback ke localhost.
 const baseURL =
-  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://portofolio.genera.my.id/api";
+  process.env.NEXT_PUBLIC_API_BASE_URL ?? "https://portofolio.mitraanumkmmandiri.com/api";
 
 // 1⃣  Instance utama
 export const api = axios.create({
@@ -29,4 +29,4 @@ export async function fetcher<T = any>(
 }
 
 
-export const BASE_URL_IMAGE = "https://portofolio.genera.my.id/storage/"
+export const BASE_URL_IMAGE = "https://portofolio.mitraanumkmmandiri.com/api/storage/"
