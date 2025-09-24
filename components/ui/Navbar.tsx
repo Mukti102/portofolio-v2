@@ -16,8 +16,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaSpotify } from "react-icons/fa6";
 import Image from "next/image";
-import profile from "@/public/assets/profile.jpeg";
 import GlassSurface from "./Glass/GlassSurface";
+import profile from "@/public/assets/profile1.jpeg";
 
 function Sidebar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -99,7 +99,7 @@ function Sidebar() {
               <div className="mb-0">
                 <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-white/20 to-white/10 backdrop-blur-sm border-2 border-white/30 flex items-center justify-center overflow-hidden">
                   <div className="w-20 h-20 bg-gradient-to-br from-gray-300 to-gray-400 rounded-full flex items-center justify-center">
-                    {!profile ? (
+                    {profile ? (
                       <Image
                         src={profile}
                         className="w-full rounded-full h-full object-cover"
