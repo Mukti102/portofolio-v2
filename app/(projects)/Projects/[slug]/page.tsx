@@ -20,7 +20,6 @@ export async function generateStaticParams() {
 export default async function Page({ params }: { params: { slug: string } }) {
   try {
     const { data: project } = await api.get(`/projects/${params.slug}`);
-
     if (!project) {
       notFound();
     }
