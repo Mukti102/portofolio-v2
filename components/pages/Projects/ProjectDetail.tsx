@@ -12,6 +12,7 @@ import { RxArrowTopRight } from "react-icons/rx";
 export default function ProjectDetail({ project }: { project: any }) {
   // optional: kalau mau refresh data via SWR/ useEffect
   const [data, setData] = useState(project);
+  
 
   if (!project)
     return <p className="py-10 text-center">Project tidak ditemukan.</p>;
